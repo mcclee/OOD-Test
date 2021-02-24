@@ -1,0 +1,1 @@
+docker run -d --name kafka-broker -p 9092:9092 -p 7203:7203 --env KAFKA_ADVERTISED_HOST_NAME = 127.0.0.1 --env KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181 -v /kafka -v /opt/kafka/logs --link zookeeper:zookeeper wurstmeister/kafka
